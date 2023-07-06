@@ -1,0 +1,15 @@
+.formWrapper {
+  @apply mt-8 space-y-6;
+
+  .genderBtnsWrapper {
+    @apply flex mb-3 ml-1;
+
+    span {
+      @apply inline-block ml-2;
+    }
+
+    & :nth-child(3) {
+      @apply ml-3;
+    }
+  }
+}

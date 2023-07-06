@@ -1,0 +1,11 @@
+.closeBtn {
+  @apply absolute top-3 right-3 smallGreenBtn;
+
+  .closeArrow {
+    @apply absolute h-4 w-4 fill-darkColorConstant transition-all duration-500;
+  }
+
+  .closeArrow_hidden {
+    @apply rotate-180;
+  }
+}

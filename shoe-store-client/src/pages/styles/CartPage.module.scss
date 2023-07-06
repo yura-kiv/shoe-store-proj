@@ -1,0 +1,51 @@
+.cartPageWrapper {
+  @apply w-full flex flex-wrap gap-3 justify-evenly;
+
+  span {
+    @apply block;
+  }
+
+  .header {
+    @apply font-bold text-3xl;
+  }
+
+  .cartCount {
+    @apply text-lg mb-3 ml-1;
+  }
+
+  .cartBlockWrapper,
+  .formOrderWrapper {
+    @apply bg-backgroundSecond rounded-3xl shadow-md p-3;
+
+    .cartItemsListWrapper {
+      @apply w-full min-h-[350px] bg-backgroundFirst mb-3 rounded-xl pl-3 pt-3 overflow-y-scroll
+        shadow-inner transition-colors transition-transform;
+    }
+  }
+}
+
+@media only screen and (max-width: 792px) {
+  .cartBlockWrapper,
+  .formOrderWrapper {
+    @apply w-[80vw] h-fit;
+
+    .cartItemsListWrapper {
+      @apply h-[40vh];
+    }
+  }
+}
+
+@media only screen and (min-width: 792px) {
+  .cartBlockWrapper,
+  .formOrderWrapper {
+    @apply min-w-[350px] w-[30vw] h-fit;
+
+    .cartItemsListWrapper {
+      @apply h-[60vh];
+    }
+  }
+
+  .formOrderWrapper {
+    @apply self-center;
+  }
+}

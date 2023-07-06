@@ -1,0 +1,17 @@
+.genderBtnsWrapper {
+  @apply min-w-[258px] h-fit flex flex-wrap gap-x-3 mb-3;
+
+  span {
+    @apply w-full mb-1;
+  }
+
+  .genderBtn {
+    @apply py-1.5 grow text-center block rounded-xl text-sm
+        cursor-pointer transition-all bg-backgroundFirst
+        hover:scale-[1.1] hover:shadow-md active:scale-[1.15];
+  }
+
+  .activeGenderBtn {
+    @apply bg-backgroundOppositeSecond text-textColorOppositeFirst;
+  }
+}

@@ -1,0 +1,33 @@
+.productFirstWrapper {
+  @apply px-1.5 pb-3 h-auto;
+
+  .productSecondWrapper {
+    @apply relative h-full p-3 bg-backgroundSecond gap-3
+    rounded-3xl flex flex-wrap shadow-md transition-all duration-300
+    hover:scale-[1.015] hover:shadow-xl;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productFirstWrapper {
+    @apply px-1.5 pb-3;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  .productFirstWrapper {
+    @apply basis-1/2;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .productFirstWrapper {
+    @apply basis-1/3;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .productFirstWrapper {
+    @apply basis-1/4;
+  }
+}

@@ -1,0 +1,14 @@
+.menuElementsWrapper {
+  @apply mx-3 flex gap-4 select-none;
+
+  .menuElement {
+    @apply block whitespace-nowrap cursor-pointer bg-backgroundFirst
+        flex items-center
+        h-9 px-4 rounded-3xl text-sm transition-all
+        hover:shadow-md hover:scale-[1.05];
+  }
+
+  .active {
+    @apply bg-backgroundOppositeSecond text-textColorOppositeFirst;
+  }
+}

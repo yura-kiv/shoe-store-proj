@@ -1,0 +1,60 @@
+.colorBtnsWrapper {
+  @apply min-w-[258px] flex flex-wrap gap-x-3 pl-1;
+
+  span {
+    @apply w-full mb-1 -ml-1;
+  }
+
+  .colorBtn {
+    @apply w-8 h-8 mb-3 rounded-full cursor-pointer border-[3px] border-borderFirst
+    transition-all hover:scale-[1.15] hover:shadow-md active:scale-[1.25];
+  }
+
+  .colorBtn_white {
+    @apply bg-btnWhite;
+  }
+
+  .colorBtn_black {
+    @apply bg-btnBlack;
+  }
+
+  .colorBtn_green {
+    @apply bg-btnGreen;
+  }
+
+  .colorBtn_gray {
+    @apply bg-btnGray;
+  }
+
+  .colorBtn_yellow {
+    @apply bg-btnYellow;
+  }
+
+  .colorBtn_blue {
+    @apply bg-btnBlue;
+  }
+
+  .colorBtn_orange {
+    @apply bg-btnOrange;
+  }
+
+  .colorBtn_purple {
+    @apply bg-btnPurple;
+  }
+
+  .colorBtn_brown {
+    @apply bg-btnBrown;
+  }
+
+  .colorBtn_red {
+    @apply bg-btnRed;
+  }
+
+  .colorBtn_pink {
+    @apply bg-btnPink;
+  }
+
+  .activeColorBtn {
+    @apply shadowBorder transition-all hover:shadowBorder;
+  }
+}

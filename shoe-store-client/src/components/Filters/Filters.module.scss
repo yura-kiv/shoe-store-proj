@@ -1,0 +1,41 @@
+@media screen and (max-width: 769px) {
+  .filtersFirstWrapper {
+    @apply fixed z-20 p-6 top-0 left-0 w-full h-[100vh] backdrop-blur-sm transition-transform duration-500;
+
+    &.hiddenFirstWrapper {
+      @apply w-fit h-[100vh] backdrop-blur-0 -translate-x-[100%];
+    }
+
+    .filtersSecondWrapper {
+      @apply relative w-full h-full p-4 pt-16 bg-backgroundSecond rounded-3xl mr-1.5
+        shadow-md overflow-hidden overflow-y-auto transition-all duration-300 select-none;
+
+      .filtersHeader {
+        @apply absolute top-4 left-4 block font-bold text-2xl text-textColorFirst
+          transition-all duration-300 rotate-0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .filtersFirstWrapper {
+    .filtersSecondWrapper {
+      @apply relative w-[290px] h-fit shrink-0 p-4 pt-16 bg-backgroundSecond rounded-3xl mr-1.5
+    shadow-md overflow-hidden transition-all duration-300 select-none;
+
+      .filtersHeader {
+        @apply absolute top-4 left-4 block font-bold text-2xl text-textColorFirst
+      transition-all duration-300 rotate-0;
+      }
+    }
+
+    .hiddenSecondWrapper {
+      @apply w-16 h-fit pl-16 pr-0;
+
+      .filtersHeader {
+        @apply top-20 -translate-x-5 rotate-90;
+      }
+    }
+  }
+}

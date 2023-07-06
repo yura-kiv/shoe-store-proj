@@ -1,0 +1,37 @@
+.themeToggleWrapper {
+  @apply relative bg-backgroundFirst h-9 w-[70px] rounded-full flex items-center justify-between
+    transition-all cursor-pointer;
+
+  .toggle {
+    @apply absolute z-0 bg-greenColorConstant h-7 w-7 rounded-full translate-x-1
+      transition-all ease-in-out duration-300;
+  }
+
+  .sunLightTheme {
+    @apply relative z-[1] w-5 h-5 translate-x-2 fill-backgroundOppositeSecond transition-all;
+  }
+
+  .moonDarkTheme {
+    @apply relative z-[2] w-6 h-6 -translate-x-1.5 fill-backgroundOppositeSecond transition-all;
+  }
+
+  &.dark {
+    .toggle {
+      @apply translate-x-[38px];
+    }
+
+    .moonDarkTheme {
+      @apply fill-darkColorConstant;
+    }
+  }
+
+  &.light {
+    .toggle {
+      @apply translate-x-1;
+    }
+
+    .sunLightTheme {
+      @apply fill-darkColorConstant;
+    }
+  }
+}

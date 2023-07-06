@@ -1,0 +1,7 @@
+.likeBtn {
+  @apply absolute right-7 top-7 smallGreenBtn z-10;
+
+  .heartLottie {
+    @apply relative w-[26px] h-[26px];
+  }
+}

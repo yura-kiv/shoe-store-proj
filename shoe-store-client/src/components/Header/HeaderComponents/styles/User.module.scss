@@ -1,0 +1,17 @@
+.leftComponentsWrapper {
+  @apply relative flex items-center;
+
+  .loginElement {
+    @apply relative bg-greenColorConstant py-1.5 px-4 rounded-3xl ml-3
+      text-textDarkConstant cursor-pointer hover:shadow-md hover:scale-[1.02];
+  }
+
+  .userElement {
+    @apply relative h-9 w-9 flex items-center justify-center bg-greenColorConstant rounded-3xl ml-3
+      text-textDarkConstant cursor-pointer transition-all hover:shadow-md hover:scale-[1.02];
+
+    svg {
+      @apply fill-darkColorConstant w-5 h-5;
+    }
+  }
+}

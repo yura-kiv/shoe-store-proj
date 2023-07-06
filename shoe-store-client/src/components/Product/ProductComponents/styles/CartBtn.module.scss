@@ -1,0 +1,35 @@
+.cartBtn {
+  @apply w-full h-10 rounded-full pl-4 pr-1.5
+    flex justify-between items-center bg-backgroundOppositeSecond
+    transition-all duration-75 cursor-pointer self-end
+    hover:scale-[1.02] hover:shadow-md active:bg-backgroundFirst
+    active:scale-[1.03] select-none;
+
+  &:active span {
+    @apply text-textColorFirst font-medium;
+  }
+
+  &:hover .plus {
+    @apply animate-plusAnimation;
+  }
+
+  span {
+    @apply block font-normal w-auto text-sm text-textColorOppositeFirst;
+  }
+
+  .plusWrapper {
+    @apply h-7 w-7 bg-backgroundSecond rounded-full p-1.5;
+
+    .plus {
+      @apply stroke-backgroundOppositeSecond;
+    }
+  }
+
+  &:active .plusWrapper {
+    @apply bg-backgroundOppositeSecond;
+
+    .plus {
+      @apply stroke-backgroundSecond;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.priceWrapper {
+  @apply min-w-[258px] h-fit grid grid-cols-3 grid-flow-row mb-2;
+
+  span {
+    @apply w-full mb-1 col-span-3;
+  }
+
+  .priceTextInfo {
+    @apply w-[80%] col-span-2 justify-self-center text-sm text-center bg-backgroundOppositeSecond py-2.5 rounded-full
+      text-textColorOppositeFirst block;
+  }
+
+  .sliderWrapper {
+    @apply w-[85%] col-span-3 mt-3 mb-8 justify-self-center;
+
+    span {
+      @apply h-2 w-2 mb-0 scale-150 font-bold text-center text-textColorFirst;
+    }
+  }
+}

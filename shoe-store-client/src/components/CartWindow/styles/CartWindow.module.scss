@@ -1,0 +1,109 @@
+.cartWindowFirstWrapper {
+  .cartWindowSecondWrapper {
+    @apply relative bg-backgroundSecond rounded-3xl p-3 overflow-hidden
+      transition-all select-none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    .closeBtnWrapper {
+      @apply absolute top-4 right-4 smallGreenBtn;
+
+      .closeBtn {
+        @apply top-4 right-4 h-4 w-4 rotate-90 fill-darkColorConstant;
+      }
+    }
+
+    .cartHeader {
+      @apply h-fit w-full;
+
+      span {
+        @apply text-2xl font-bold block ml-1 mt-1;
+      }
+    }
+
+    .cartItemsList {
+      @apply min-h-[20vh] max-h-[40vh] w-full bg-backgroundFirst mb-3 rounded-xl px-3 pt-3 overflow-y-scroll
+      shadow-inner transition-colors transition-transform;
+    }
+
+    .textInfo {
+      @apply block text-lg mb-2 ml-1.5;
+    }
+
+    .cartFooter {
+      @apply h-10 w-full flex;
+
+      .goToBtn {
+        @apply h-10 grow bg-backgroundOppositeSecond rounded-3xl flex items-center justify-between
+          pl-4 pr-1.5 cursor-pointer transition-colors transition-transform hover:scale-[1.02] hover:shadow-md
+          active:bg-backgroundFirst active:scale-[1.03] select-none;
+
+        &:active span {
+          @apply text-textColorFirst font-medium;
+        }
+
+        &:active .arrowWrapper {
+          @apply bg-backgroundOppositeSecond;
+
+          .arrow {
+            @apply stroke-backgroundSecond;
+          }
+        }
+
+        span {
+          @apply text-textColorOppositeFirst text-sm;
+        }
+
+        .arrowWrapper {
+          @apply relative w-7 h-7 bg-backgroundSecond rounded-full flex items-center justify-center;
+
+          .arrow {
+            @apply h-fit w-fit stroke-backgroundOppositeSecond;
+          }
+        }
+      }
+
+      .deleteBtn {
+        @apply smallGreenBtn ml-3;
+
+        .deleteIcon {
+          @apply fill-darkColorConstant h-5 w-5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cartWindowFirstWrapper {
+    @apply fixed z-20 w-full h-[100vh] top-0 left-0 p-3 transition-all overflow-hidden -translate-y-full duration-500;
+
+    &.active {
+      @apply backdrop-blur-sm w-full h-[100vh] -translate-y-0;
+    }
+
+    .cartWindowSecondWrapper {
+      @apply relative bg-backgroundSecond;
+
+      &.active {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .cartWindowFirstWrapper {
+    @apply absolute z-20 top-[65px] right-16 w-[390px] invisible;
+
+    &.active {
+      @apply visible;
+    }
+
+    .cartWindowSecondWrapper {
+      @apply relative min-h-fit animate-cartWindowHideAnimation;
+
+      &.active {
+        @apply animate-cartWindowUpriseAnimation;
+      }
+    }
+  }
+}

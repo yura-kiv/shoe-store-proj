@@ -1,0 +1,19 @@
+.signupPageMainWrapper {
+  @apply w-full h-fit flex items-center justify-center;
+
+  .signupPageWrapper {
+    @apply min-w-[360px] w-[30vw] h-fit bg-backgroundSecond rounded-3xl p-3 shadow-md;
+
+    span {
+      @apply block;
+    }
+
+    label {
+      @apply ml-1.5;
+    }
+
+    .signupHeader {
+      @apply w-full font-bold text-3xl text-center;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.footerWrapper {
+  @apply absolute -bottom-16 h-16 w-[calc(100%-24px)] bg-backgroundSecond
+    rounded-3xl px-3 shadow-md flex justify-between items-center transition-colors;
+
+  .logoWrapper {
+    @apply h-12;
+
+    svg {
+      @apply h-full w-fit ml-1 fill-backgroundOppositeSecond;
+    }
+  }
+
+  .marquee {
+    @apply w-full h-12 mx-6 bg-backgroundFirst rounded-2xl flex items-center gap-3
+      overflow-hidden shadow-inner;
+  }
+
+  .marqueeContent {
+    @apply w-fit h-5 flex gap-3;
+
+    .svgTextWrapper {
+      @apply h-full;
+
+      svg {
+        @apply h-full w-fit fill-backgroundOppositeSecond;
+      }
+    }
+  }
+
+  .scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 12px));
+    }
+  }
+
+  .contactInfo {
+    @apply w-fit whitespace-nowrap mr-1.5;
+  }
+}

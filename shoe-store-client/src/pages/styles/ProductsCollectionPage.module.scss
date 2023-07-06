@@ -1,0 +1,14 @@
+.productsCollectionPageWraper {
+  @apply flex;
+}
+
+.btnsWrapper {
+  @apply w-full h-fit flex gap-3 mb-3;
+
+  .filtersBtn,
+  .menuBtn {
+    @apply h-10 flex items-center justify-center rounded-full bg-backgroundSecond grow
+      cursor-pointer transition-all hover:shadow-md hover:scale-[1.02] active:text-textColorOppositeFirst
+      active:bg-backgroundOppositeSecond active:scale-[1.035];
+  }
+}

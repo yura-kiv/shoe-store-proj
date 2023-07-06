@@ -1,0 +1,13 @@
+.ratingWrapper {
+  @apply absolute left-7 top-7 h-10 w-fit px-3 rounded-full z-10
+    select-none flex items-center justify-center bg-greenColorConstant
+    transition-all hover:scale-[1.1] hover:shadow-md;
+
+  .ratingStar {
+    @apply relative h-[22px] w-[22px] mr-1 fill-greenColorConstant stroke-darkColorConstant;
+  }
+
+  span {
+    @apply block text-base font-bold text-textDarkConstant mt-0.5;
+  }
+}

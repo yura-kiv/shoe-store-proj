@@ -1,0 +1,20 @@
+.textInfoWrapper {
+  @apply w-full grid grid-cols-2 items-center cursor-default;
+
+  .textInfoHeader {
+    @apply block w-full text-xl font-bold col-span-2;
+  }
+
+  .textInfoBrand {
+    @apply font-normal text-sm row-start-2 select-none;
+  }
+
+  .textInfoGender {
+    @apply font-normal text-sm row-start-3 select-none;
+  }
+
+  .textInfoPrice {
+    @apply text-xl row-start-2 row-end-4
+      place-self-end self-center select-none;
+  }
+}

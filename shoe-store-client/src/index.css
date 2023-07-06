@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+:root[data-theme="light"] {
+  --backgroundFirst: rgb(239, 239, 239);
+  --backgroundSecond: rgb(255, 255, 255);
+  --backgroundOppositeSecond: rgb(31, 31, 31);
+
+  --textColorFirst: rgb(31, 31, 31);
+  --textColorOppositeFirst: rgb(230, 230, 230);
+  --textDarkConstant: rgb(22, 22, 22);
+
+  --borderFirst: rgb(239, 239, 239);
+  --borderOppositeFirst: rgb(31, 31, 31);
+
+  --greenColorConstant: rgb(194, 249, 108);
+  --darkColorConstant: rgb(22, 22, 22);
+}
+
+:root[data-theme="dark"] {
+  --backgroundFirst: rgb(17, 17, 22);
+  --backgroundSecond: rgb(34, 34, 40);
+  --backgroundOppositeSecond: rgb(155, 155, 166);
+
+  --textColorFirst: rgb(220, 220, 230);
+  --textColorOppositeFirst: rgb(20, 20, 21);
+  --textDarkConstant: rgb(22, 22, 22);
+
+  --borderFirst: rgb(180, 180, 180);
+  --borderOppositeFirst: rgb(7, 7, 7);
+
+  --greenColorConstant: rgb(194, 249, 108);
+  --darkColorConstant: rgb(22, 22, 22);
+}
+
+* {
+  @apply box-border text-textColorFirst font-poppins;
+}
+
+body {
+  @apply relative bg-backgroundFirst h-fit transition-colors duration-300 scroll-smooth;
+}
+
+#root {
+  @apply h-fit;
+}
+
+::-webkit-scrollbar {
+  @apply w-2.5 h-2.5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply w-10 bg-backgroundOppositeSecond rounded-full;
+}
+
+.Toastify__toast-body > div {
+  @apply text-darkColorConstant;
+}
+
+.Toastify__toast {
+  @apply rounded-2xl border-8 border-backgroundSecond 
+    drop-shadow-lg;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  @apply bg-greenColorConstant;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  @apply bg-btnYellow;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+}
+
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success {
+  @apply bg-darkColorConstant;
+}
+
+.Toastify__close-button > svg {
+  @apply fill-darkColorConstant;
+}
+
+.Toastify__toast-icon > svg {
+  @apply fill-darkColorConstant;
+}

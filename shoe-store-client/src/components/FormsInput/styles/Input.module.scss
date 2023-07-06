@@ -1,0 +1,14 @@
+.inputWrapper {
+  @apply w-full h-fit mb-3;
+
+  label {
+    @apply block ml-1.5;
+  }
+
+  input {
+    @apply h-10 w-full mr-3 px-4 rounded-full bg-backgroundFirst
+      transition-shadow text-base focus:shadow-md
+      focus:scale-[1.005] focus:bg-backgroundFirst
+      focus:border-2 focus:border-borderFirst;
+  }
+}

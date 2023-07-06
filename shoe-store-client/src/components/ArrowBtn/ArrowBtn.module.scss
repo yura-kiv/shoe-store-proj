@@ -1,0 +1,11 @@
+.btn {
+  @apply smallGreenBtn ml-auto;
+
+  .arrow {
+    @apply relative -rotate-45 transition-all stroke-darkColorConstant;
+  }
+
+  &:active .arrow {
+    @apply rotate-45;
+  }
+}

@@ -1,0 +1,4 @@
+.headerWrapper {
+  @apply relative h-14 min-w-fit w-full bg-backgroundSecond rounded-3xl mb-3 px-2.5
+    shadow-md flex justify-between items-center transition-colors;
+}

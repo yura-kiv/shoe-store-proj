@@ -1,0 +1,36 @@
+.productWrapper {
+  @apply relative h-fit w-full bg-backgroundSecond p-3 rounded-xl flex flex-wrap items-center mb-3
+    shadow-md select-none;
+
+  .previewImgWrapper {
+    @apply relative w-28 h-24 bg-backgroundFirst rounded-md mr-3 overflow-hidden;
+
+    .previewImg {
+      @apply absolute h-full w-full top-0 left-0 object-cover;
+    }
+  }
+
+  .productName {
+    @apply w-[80%] block mb-1 text-base font-bold;
+  }
+
+  .textInfo {
+    @apply w-fit h-fit;
+
+    span {
+      @apply block;
+    }
+  }
+
+  .deleteBtn {
+    @apply absolute top-3 right-3 smallGreenBtn;
+
+    &.deleteBtn:hover .deleteIcon {
+      @apply rotate-[135deg];
+    }
+
+    .deleteIcon {
+      @apply stroke-darkColorConstant rotate-45 transition-transform;
+    }
+  }
+}

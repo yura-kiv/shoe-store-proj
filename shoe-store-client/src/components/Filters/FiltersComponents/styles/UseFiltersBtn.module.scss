@@ -1,0 +1,38 @@
+.useFiltersBtn {
+  @apply min-w-[258px] h-10 mb-2 rounded-full pl-4 pr-1.5 flex bg-backgroundFirst
+    justify-between items-center transition-all duration-75;
+
+  &.active {
+    @apply bg-backgroundOppositeSecond cursor-pointer transition-all
+    hover:scale-[1.02] hover:shadow-md active:bg-backgroundFirst
+    active:scale-[1.03];
+
+    span {
+      @apply text-textColorOppositeFirst;
+    }
+
+    &:active span {
+      @apply text-textColorFirst font-medium;
+    }
+
+    &:hover .plus {
+      @apply animate-plusAnimation;
+    }
+
+    &:active .plusWrapper {
+      @apply bg-backgroundOppositeSecond;
+
+      .plus {
+        @apply stroke-backgroundSecond;
+      }
+    }
+  }
+
+  .plusWrapper {
+    @apply h-7 w-7 bg-backgroundSecond rounded-full p-1.5;
+
+    .plus {
+      @apply stroke-backgroundOppositeSecond;
+    }
+  }
+}

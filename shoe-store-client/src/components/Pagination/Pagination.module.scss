@@ -1,0 +1,37 @@
+.paginationMainWrapper {
+  @apply w-full flex justify-center;
+
+  .paginationWrapper {
+    @apply h-fit w-fit flex gap-2 items-center p-2.5 bg-backgroundSecond rounded-3xl
+      box-border shadow-md select-none;
+
+    .previousBtn,
+    .nextBtn {
+      @apply h-8 w-8 bg-backgroundOppositeSecond flex items-center justify-center
+        text-textColorOppositeFirst rounded-full hover:shadow-md hover:scale-[1.05]
+        transition-all;
+
+      .arrowLeft,
+      .arrowRight {
+        @apply h-2.5 w-2.5 stroke-textColorOppositeFirst;
+      }
+
+      .arrowLeft {
+        @apply rotate-180;
+      }
+    }
+
+    .linkBtns {
+      @apply h-10 w-10 flex items-center justify-center rounded-full bg-backgroundFirst
+      cursor-pointer transition-all text-sm hover:shadow-md hover:scale-[1.05];
+    }
+
+    .activeLinkBtn {
+      @apply bg-greenColorConstant text-textDarkConstant;
+    }
+
+    .disabledPrevOrNextBtn {
+      @apply opacity-50;
+    }
+  }
+}

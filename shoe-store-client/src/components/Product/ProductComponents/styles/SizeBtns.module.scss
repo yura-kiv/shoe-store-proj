@@ -1,0 +1,13 @@
+.sizeBtnsWrapper {
+  @apply w-full h-fit flex flex-wrap justify-center gap-2 self-end;
+
+  .sizeBtn {
+    @apply w-10 py-1.5 text-center block rounded-xl text-sm
+      select-none cursor-pointer transition-all bg-backgroundFirst
+      hover:scale-[1.1] hover:shadow-md active:scale-[1.15];
+  }
+
+  .activeSizeBtn {
+    @apply bg-backgroundOppositeSecond text-textColorOppositeFirst;
+  }
+}

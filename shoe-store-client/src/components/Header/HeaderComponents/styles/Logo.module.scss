@@ -1,0 +1,27 @@
+.mainLogo {
+  @apply h-full py-2 flex items-center cursor-pointer transition-all hover:scale-[1.02] overflow-hidden;
+
+  .iconLogo {
+    @apply relative h-full w-20 bg-backgroundOppositeSecond rounded-3xl;
+
+    .starLogo {
+      @apply absolute h-5 w-5 top-2.5 left-[30px] fill-backgroundSecond transition-all;
+    }
+
+    .ellipseLogo {
+      @apply absolute h-[72px] w-[72px] -top-[16px] left-[4px] fill-backgroundSecond transition-all;
+    }
+  }
+
+  &:hover .iconLogo .starLogo {
+    @apply animate-logoStarAnimation;
+  }
+
+  &:hover .iconLogo .ellipseLogo {
+    @apply animate-logoEllipseAnimation;
+  }
+
+  .textLogoDote {
+    @apply h-[17px] w-fit pl-4 fill-textColorFirst;
+  }
+}
