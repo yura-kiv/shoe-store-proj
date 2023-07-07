@@ -45,4 +45,5 @@
 </ul>
 <hr>
 <h2 align="center">Images for the project:</h2>
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[scrnli_07-07-2023_13-56-51.webm](https://github.com/yura-kiv/shoe-store-proj/assets/94392546/21987508-5877-4dc6-ad60-0601692c7ac6)
+
