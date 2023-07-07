@@ -45,5 +45,50 @@
 </ul>
 <hr>
 <h2 align="center">Images for the project:</h2>
+<h3>Main page:</h3>
 <img src="assets/mainPage.png" alt="mainPage"></img>
-<img src="assets/mainPageGif.gif" alt="mainPage"></img>
+<img style="width: 100%;" src="assets/mainPageGif.gif" alt="mainPageGif"></img>
+
+<h3>Products page:</h3>
+<img src="assets/shoesPage.png" alt="shoesPage"></img>
+<img style="width: 100%;" src="assets/shoesPageGif.gif" alt="shoesPageGif"></img>
+<img style="width: 100%;" src="assets/shoesPageGif1.gif" alt="shoesPageGif"></img>
+
+<h3>Product page:</h3>
+<img src="assets/productPage.png" alt="productPage"></img>
+<img style="width: 100%;" src="assets/productPageGif.gif" alt="productPageGif"></img>
+
+<h3>Cart page:</h3>
+<img src="assets/cartPage.png" alt="cartPage"></img>
+
+<h3>Login/Register pages:</h3>
+<img src="assets/loginPage.png" alt="loginPage"></img>
+<img src="assets/registerPage.png" alt="registerPage"></img>
+
+<h2>Product data example:</h2>
+<code>
+[<br>
+  {<br>
+    "code": "",<br>
+    "name": "",<br>
+    "brand": "",<br>
+    "price": 0.0,<br>
+    "description": "",<br>
+    "gender": "",<br>
+    "tags": ["", ""],<br>
+    "saleCount": 0,<br>
+    "aggregateRating": {<br>
+      "ratingValue": 0.0,<br>
+      "reviewCount": 0<br>
+    },<br>
+    "variants": [<br>
+      {<br>
+        "color": "",<br>
+        "sizes": [0, 0, 0],<br>
+        "images": ["", "", "", "", ""]<br>
+      }<br>
+    ],<br>
+    "commentsId": []<br>
+  }<br>
+]<br>
+</code>
