@@ -45,3 +45,5 @@
 </ul>
 <hr>
 <h2 align="center">Images for the project:</h2>
+<img src="assets/mainPage.png" alt="mainPage"></img>
+<img src="assets/mainPageGif.gif" alt="mainPage"></img>
