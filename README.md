@@ -45,3 +45,4 @@
 </ul>
 <hr>
 <h2 align="center">Images for the project:</h2>
+![mainPageVideo](assets/mainPage.webm)
