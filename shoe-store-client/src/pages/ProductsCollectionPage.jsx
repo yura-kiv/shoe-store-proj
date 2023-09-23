@@ -3,13 +3,10 @@ import styles from "./styles/ProductsCollectionPage.module.scss";
 import ProductsTable from "../components/ProductsTable/ProductsTable";
 import Filters from "../components/Filters/Filters";
 import { useMatchMedia } from "../hooks/useMatchMedia";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeFiltersWindowState } from "../toolkitRedux/filtersSlice";
 
 function ProductsCollectionPage() {
-  const filtersWindowState = useSelector(
-    (state) => state.filtersSlice.filtersWindowState
-  );
   const { screen770_plus } = useMatchMedia();
   const dispatch = useDispatch();
   return (
