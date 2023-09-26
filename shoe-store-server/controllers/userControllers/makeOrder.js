@@ -3,7 +3,6 @@ const Order = require("../../models/orderModel");
 makeOrder = async (req, res) => {
   try {
     const { cart, name, email, phone, address, description } = req.body;
-    console.log(cart, name, email, phone, address, description);
     const order = new Order({
       cart,
       name,

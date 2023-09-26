@@ -49,11 +49,9 @@ const productsCollectionSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "rejected";
         state.error = action.payload;
-        console.log(action.payload);
       });
   },
 });
 
 export default productsCollectionSlice.reducer;
-export const { updateProductsCollectionToInitialState } =
-  productsCollectionSlice.actions;
+export const { updateProductsCollectionToInitialState } = productsCollectionSlice.actions;

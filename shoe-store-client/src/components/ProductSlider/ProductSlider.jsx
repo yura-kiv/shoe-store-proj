@@ -28,7 +28,6 @@ const ProductSlider = ({ imgsList }) => {
         }}
         modules={[Navigation, Pagination, FreeMode, Thumbs]}
         className={styles.productsMainSlider}
-        onSlideChange={() => console.log("slide change")}
       >
         {imgsList.map((img) => {
           return (

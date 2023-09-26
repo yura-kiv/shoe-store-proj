@@ -11,7 +11,6 @@ const {
 class ProductsConroller {
   getAllProducts = async (req, res) => {
     try {
-      console.log("getAllProducts");
       const products = await Product.find({});
       res.json(products);
     } catch (error) {
@@ -22,7 +21,6 @@ class ProductsConroller {
 
   getProductsCount = async (req, res) => {
     try {
-      console.log("getProductsCount");
       const count = await Product.find({}).count();
       res.json({ count: count });
     } catch (error) {
@@ -33,7 +31,6 @@ class ProductsConroller {
 
   getProductById = async (req, res) => {
     try {
-      console.log("getProductById");
       const id = req.params.id;
       const product = await Product.findById(id);
       if (!product) {
@@ -49,7 +46,6 @@ class ProductsConroller {
   getProductsFilter = async (req, res) => {
     try {
       const query = req.query;
-      //console.log(query);
       const name = query.name || "";
       const colors = query.colors ? query.colors : assetColors;
       const brands = query.brands ? query.brands : assetBrands;
@@ -58,7 +54,6 @@ class ProductsConroller {
       const prices = query.prices ? query.prices.map(Number) : assetPrices;
       const tags = query.tags ? query.tags : assetTags;
 
-      //console.log(name, colors, brands, genders, sizes, prices, tags);
       /////
       const page = parseInt(query.page) - 1 || 0;
       const limit = parseInt(query.limit) || 8;

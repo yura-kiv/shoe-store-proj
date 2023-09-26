@@ -25,17 +25,17 @@ export const privateRoutes = [
   { path: "/shoes/:type?/:id/:color", element: <ProductPage />, exact: true },
   { path: "/cart", element: <CartPage />, exact: true },
   { path: "/user", element: <UserPage />, exact: true },
-  //   {
-  //     path: "/login",
-  //     element: <Navigate to="/user" />,
-  //     replace: true,
-  //     exact: true,
-  //   },
-  //   {
-  //     path: "/signup",
-  //     element: <Navigate to="/user" />,
-  //     replace: true,
-  //     exact: true,
-  //   },
+  {
+    path: "/login",
+    element: <Navigate to="/user" />,
+    replace: true,
+    exact: true,
+  },
+  {
+    path: "/signup",
+    element: <Navigate to="/user" />,
+    replace: true,
+    exact: true,
+  },
   { path: "*", element: <NotFoundPage />, exact: true },
 ];

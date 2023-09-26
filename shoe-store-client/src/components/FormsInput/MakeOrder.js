@@ -47,7 +47,6 @@ export default function MakeOrder() {
       }).unwrap();
       dispatch(updateCartToInitialState());
       setOrderUserState(fieldsState);
-      console.log(response);
     } catch (err) {
       console.log(err);
     }

@@ -20,8 +20,7 @@ export default function Signup() {
   const [signup, { isLoading }] = useSignupMutation();
   const navigate = useNavigate();
 
-  const handleChange = (e) =>
-    setSignupState({ ...signupState, [e.target.id]: e.target.value });
+  const handleChange = (e) => setSignupState({ ...signupState, [e.target.id]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();

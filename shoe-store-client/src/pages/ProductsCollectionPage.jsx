@@ -13,15 +13,14 @@ function ProductsCollectionPage() {
     <>
       {!screen770_plus && (
         <div className={styles.btnsWrapper}>
-          <div
+          <button
             onClick={() => {
               dispatch(changeFiltersWindowState());
             }}
             className={styles.filtersBtn}
           >
             Filters
-          </div>
-          <div className={styles.menuBtn}>Menu</div>
+          </button>
         </div>
       )}
       <div className={styles.productsCollectionPageWraper}>
