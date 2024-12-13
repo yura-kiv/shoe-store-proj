@@ -1,8 +1,8 @@
-import { React } from "react";
-import styles from "./styles/TagBtns.module.scss";
-import { tags } from "../filterAssets";
-import { useDispatch } from "react-redux";
-import { changeTags } from "../../../toolkitRedux/filtersSlice";
+import { React } from 'react';
+import styles from './styles/TagBtns.module.scss';
+import { tags } from '../filterAssets';
+import { useDispatch } from 'react-redux';
+import { changeTags } from '../../../toolkitRedux/filtersSlice';
 
 function TagBtns() {
   const dispatch = useDispatch();

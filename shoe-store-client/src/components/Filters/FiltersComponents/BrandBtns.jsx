@@ -1,8 +1,8 @@
-import { React } from "react";
-import styles from "./styles/BrandBtns.module.scss";
-import { brands } from "../filterAssets";
-import { useDispatch } from "react-redux";
-import { changeBrands } from "../../../toolkitRedux/filtersSlice";
+import { React } from 'react';
+import styles from './styles/BrandBtns.module.scss';
+import { brands } from '../filterAssets';
+import { useDispatch } from 'react-redux';
+import { changeBrands } from '../../../toolkitRedux/filtersSlice';
 
 function BrandBtns() {
   const dispatch = useDispatch();

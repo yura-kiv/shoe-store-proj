@@ -1,6 +1,6 @@
-const User = require("../../models/userModel");
-const generateAccessToken = require("../../config/generateAccessToken");
-const bcrypt = require("bcryptjs");
+const User = require('../../models/userModel');
+const generateAccessToken = require('../../config/generateAccessToken');
+const bcrypt = require('bcryptjs');
 
 login = async (req, res) => {
   try {
@@ -8,15 +8,15 @@ login = async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(401).json({
-        errorType: "email",
-        msg: "User with this email not fount.",
+        errorType: 'email',
+        msg: 'User with this email not fount.',
       });
     }
     const validatePassword = bcrypt.compareSync(password, user.password);
     if (!validatePassword) {
       return res
         .status(401)
-        .json({ errorType: "password", msg: "Invalid password." });
+        .json({ errorType: 'password', msg: 'Invalid password.' });
     }
     const accessToken = generateAccessToken(
       user._id,
@@ -35,8 +35,8 @@ login = async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(400).json({
-      errorType: "server",
-      msg: "Something went wrong...",
+      errorType: 'server',
+      msg: 'Something went wrong...',
     });
   }
 };

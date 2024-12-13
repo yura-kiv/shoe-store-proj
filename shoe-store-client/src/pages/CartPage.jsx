@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styles from "./styles/CartPage.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import CartWindowProduct from "../components/CartWindow/CartWindowProduct";
-import Header from "../components/FormsInput/Header";
-import MakeOrder from "../components/FormsInput/MakeOrder";
+import React, { useState } from 'react';
+import styles from './styles/CartPage.module.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import CartWindowProduct from '../components/CartWindow/CartWindowProduct';
+import Header from '../components/FormsInput/Header';
+import MakeOrder from '../components/FormsInput/MakeOrder';
 
 const CartPage = () => {
   const cart = useSelector((state) => state.cartSlice);
@@ -25,7 +25,7 @@ const CartPage = () => {
             })
           ) : (
             <span
-              style={{ opacity: "0.5", fontSize: "20px", textAlign: "center" }}
+              style={{ opacity: '0.5', fontSize: '20px', textAlign: 'center' }}
             >
               Add products...
             </span>
@@ -34,7 +34,7 @@ const CartPage = () => {
       </div>
 
       <div className={styles.formOrderWrapper}>
-        <Header heading="Specify the details of your order" />
+        <Header heading='Specify the details of your order' />
         <MakeOrder />
       </div>
     </div>

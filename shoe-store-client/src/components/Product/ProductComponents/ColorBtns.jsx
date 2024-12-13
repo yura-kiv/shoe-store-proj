@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import styles from "./styles/ColorBtns.module.scss";
+import React, { useRef } from 'react';
+import styles from './styles/ColorBtns.module.scss';
 
 const ColorBtns = ({ colors, activeColor, setActiveColor }) => {
   const colorBtnsWrapper = useRef(null);
@@ -25,7 +25,7 @@ const ColorBtns = ({ colors, activeColor, setActiveColor }) => {
             className={
               `${styles.colorBtn} ` +
               styles[`colorBtn_${color}`] +
-              `${color === activeColor ? ` ${styles.activeColorBtn}` : ""}`
+              `${color === activeColor ? ` ${styles.activeColorBtn}` : ''}`
             }
           ></div>
         );

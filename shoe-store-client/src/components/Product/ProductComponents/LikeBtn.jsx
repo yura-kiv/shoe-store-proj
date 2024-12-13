@@ -1,7 +1,7 @@
-import { React, useRef, useEffect, useState } from "react";
-import Lottie from "lottie-react";
-import heart from "../../../assets/heartLike.json";
-import styles from "./styles/LikeBtn.module.scss";
+import { React, useRef, useEffect, useState } from 'react';
+import Lottie from 'lottie-react';
+import heart from '../../../assets/heartLike.json';
+import styles from './styles/LikeBtn.module.scss';
 
 const LikeBtn = ({ isLiked, setIsLiked }) => {
   const animationDuration = 41;

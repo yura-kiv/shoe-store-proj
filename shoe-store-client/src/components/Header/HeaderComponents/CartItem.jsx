@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./styles/CartItem.module.scss";
-import { ReactComponent as CartIcon } from "../../../assets/cart.svg";
-import { useSelector, useDispatch } from "react-redux";
-import { changeCartWindowState } from "../../../toolkitRedux/cartSlice";
+import React from 'react';
+import styles from './styles/CartItem.module.scss';
+import { ReactComponent as CartIcon } from '../../../assets/cart.svg';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeCartWindowState } from '../../../toolkitRedux/cartSlice';
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const Cart = () => {
       }}
       className={
         `${styles.cartItemWrapper}` +
-        ` ${cartWindowState === "active" ? styles.active : ""}`
+        ` ${cartWindowState === 'active' ? styles.active : ''}`
       }
     >
       <span className={styles.cartCount}>{cartCount}</span>

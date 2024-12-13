@@ -1,5 +1,5 @@
-import { React, useRef } from "react";
-import styles from "./styles/SizeBtns.module.scss";
+import { React, useRef } from 'react';
+import styles from './styles/SizeBtns.module.scss';
 
 const SizeBtns = ({ setActiveSize, activeSizesList, activeColor }) => {
   const sizesBtnsWrapper = useRef(null);

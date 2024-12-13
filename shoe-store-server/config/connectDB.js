@@ -1,15 +1,16 @@
-const mongoose = require("mongoose");
-const dbLink = "mongodb://127.0.0.1:27017/shoe-shop-db";
+const DB_URL = process.env.DB_URL;
+
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(dbLink, {
+    await mongoose.connect(DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("MongoDB connection SUCCESS");
+    console.log('MongoDB connection SUCCESS');
   } catch (error) {
-    console.error("MongoDB connection FAIL");
+    console.error('MongoDB connection FAIL');
     process.exit(1);
   }
 };

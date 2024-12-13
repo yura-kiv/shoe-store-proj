@@ -1,8 +1,8 @@
-import { React } from "react";
-import styles from "./styles/ColorBtns.module.scss";
-import { colors } from "../filterAssets";
-import { useDispatch } from "react-redux";
-import { changeColors } from "../../../toolkitRedux/filtersSlice";
+import { React } from 'react';
+import styles from './styles/ColorBtns.module.scss';
+import { colors } from '../filterAssets';
+import { useDispatch } from 'react-redux';
+import { changeColors } from '../../../toolkitRedux/filtersSlice';
 
 function ColorBtns() {
   const dispatch = useDispatch();

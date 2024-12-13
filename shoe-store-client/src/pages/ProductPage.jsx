@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styles from "./styles/ProductPage.module.scss";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import ProductSlider from "../components/ProductSlider/ProductSlider";
-import ColorBtns from "../components/Product/ProductComponents/ColorBtns";
-import SizeBtns from "../components/Product/ProductComponents/SizeBtns";
-import CartBtn from "../components/Product/ProductComponents/CartBtn";
-import Rating from "../components/Product/ProductComponents/Rating";
-import LikeBtn from "../components/Product/ProductComponents/LikeBtn";
+import React, { useState, useEffect } from 'react';
+import styles from './styles/ProductPage.module.scss';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import ProductSlider from '../components/ProductSlider/ProductSlider';
+import ColorBtns from '../components/Product/ProductComponents/ColorBtns';
+import SizeBtns from '../components/Product/ProductComponents/SizeBtns';
+import CartBtn from '../components/Product/ProductComponents/CartBtn';
+import Rating from '../components/Product/ProductComponents/Rating';
+import LikeBtn from '../components/Product/ProductComponents/LikeBtn';
 
 const getColors = (variants) => {
   const colors = [];
@@ -40,7 +40,7 @@ const ProductPage = () => {
           setProductVariant(getVariant(product.variants, activeColor));
         })
         .catch((error) => {
-          console.log("Opppppppssss.... something went wrong!");
+          console.log('Opppppppssss.... something went wrong!');
         });
     } else {
       navigate(`/shoes/${params.type}/${params.id}/${activeColor}`);
@@ -65,7 +65,7 @@ const ProductPage = () => {
             <span className={styles.name}>{product.name}</span>
             <span className={styles.code}>{product.code}</span>
             <span className={styles.gender}>
-              {product.gender === "male" ? "Men" : "Woman"}
+              {product.gender === 'male' ? 'Men' : 'Woman'}
             </span>
             <span className={styles.brand}>{product.brand}</span>
             <span className={styles.price}>${product.price}</span>

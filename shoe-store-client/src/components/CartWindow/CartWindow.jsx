@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import styles from "./styles/CartWindow.module.scss";
-import CartWindowProduct from "./CartWindowProduct";
-import { useSelector, useDispatch } from "react-redux";
-import { ReactComponent as Arrow } from "../../assets/arrow.svg";
-import { ReactComponent as DeleteIcon } from "../../assets/delete.svg";
-import { updateCartToInitialState } from "../../toolkitRedux/cartSlice";
-import { ReactComponent as CloseBtn } from "../../assets/doubleArrow.svg";
+import React, { useEffect } from 'react';
+import styles from './styles/CartWindow.module.scss';
+import CartWindowProduct from './CartWindowProduct';
+import { useSelector, useDispatch } from 'react-redux';
+import { ReactComponent as Arrow } from '../../assets/arrow.svg';
+import { ReactComponent as DeleteIcon } from '../../assets/delete.svg';
+import { updateCartToInitialState } from '../../toolkitRedux/cartSlice';
+import { ReactComponent as CloseBtn } from '../../assets/doubleArrow.svg';
 import {
   changeCartWindowState,
   closeCartWindow,
-} from "../../toolkitRedux/cartSlice";
-import { Link, useLocation } from "react-router-dom";
-import { useMatchMedia } from "../../hooks/useMatchMedia";
+} from '../../toolkitRedux/cartSlice';
+import { Link, useLocation } from 'react-router-dom';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 const CartWindow = () => {
   const dispatch = useDispatch();
@@ -24,25 +24,25 @@ const CartWindow = () => {
   }, [location]);
 
   useEffect(() => {
-    if (cart.cartWindowState === "active" && !screen600_plus) {
-      document.body.style.overflow = "hidden";
+    if (cart.cartWindowState === 'active' && !screen600_plus) {
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     };
   }, [cart.cartWindowState, screen600_plus]);
 
   return (
     <div
       className={`${styles.cartWindowFirstWrapper} ${
-        cart.cartWindowState === "active" ? styles.active : ""
+        cart.cartWindowState === 'active' ? styles.active : ''
       }`}
     >
       <div
         className={`${styles.cartWindowSecondWrapper} ${
-          cart.cartWindowState === "active" ? styles.active : ""
+          cart.cartWindowState === 'active' ? styles.active : ''
         }`}
       >
         <div
@@ -68,14 +68,14 @@ const CartWindow = () => {
               );
             })
           ) : (
-            <span style={{ opacity: "0.5", fontSize: "16px" }}>
+            <span style={{ opacity: '0.5', fontSize: '16px' }}>
               Cart is empty...
             </span>
           )}
         </div>
         <div className={styles.cartFooter}>
           <Link
-            to={"/cart"}
+            to={'/cart'}
             className={styles.goToBtn}
           >
             <span>Go to the cart</span>

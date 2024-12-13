@@ -1,8 +1,8 @@
-import { React } from "react";
-import styles from "./styles/SizeBtns.module.scss";
-import { sizes } from "../filterAssets";
-import { useDispatch } from "react-redux";
-import { changeSizes } from "../../../toolkitRedux/filtersSlice";
+import { React } from 'react';
+import styles from './styles/SizeBtns.module.scss';
+import { sizes } from '../filterAssets';
+import { useDispatch } from 'react-redux';
+import { changeSizes } from '../../../toolkitRedux/filtersSlice';
 
 const SizeBtns = () => {
   const dispatch = useDispatch();

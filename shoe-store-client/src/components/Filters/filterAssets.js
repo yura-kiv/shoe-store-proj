@@ -1,15 +1,15 @@
 const colors = [
-  "black",
-  "white",
-  "green",
-  "gray",
-  "blue",
-  "yellow",
-  "orange",
-  "brown",
-  "red",
-  "pink",
-  "purple",
+  'black',
+  'white',
+  'green',
+  'gray',
+  'blue',
+  'yellow',
+  'orange',
+  'brown',
+  'red',
+  'pink',
+  'purple',
 ];
 
 const sizes = [
@@ -18,19 +18,19 @@ const sizes = [
 ];
 
 const tags = [
-  "low",
-  "lifestyle",
-  "run",
-  "sport",
-  "sport-style",
-  "training",
-  "high",
-  "force",
-  "skate",
-  "retro",
-  "mid",
+  'low',
+  'lifestyle',
+  'run',
+  'sport',
+  'sport-style',
+  'training',
+  'high',
+  'force',
+  'skate',
+  'retro',
+  'mid',
 ];
 
-const brands = ["Nike", "Adidas", "New Balance"];
+const brands = ['Nike', 'Adidas', 'New Balance'];
 
 export { colors, sizes, tags, brands };

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import styles from "./styles/Price.module.scss";
-import ArrowBtn from "../../ArrowBtn/ArrowBtn";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
+import React, { useState, useEffect } from 'react';
+import styles from './styles/Price.module.scss';
+import ArrowBtn from '../../ArrowBtn/ArrowBtn';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 import {
   trackStyle,
   railStyle,
   handleStyle,
   marks,
   activeDotStyle,
-} from "./styles/rangeSlider";
-import { useDispatch, useSelector } from "react-redux";
-import { changePage, changePrices } from "../../../toolkitRedux/filtersSlice";
-import { fetchProducts } from "../../../toolkitRedux/productsCollectionSlice";
+} from './styles/rangeSlider';
+import { useDispatch, useSelector } from 'react-redux';
+import { changePage, changePrices } from '../../../toolkitRedux/filtersSlice';
+import { fetchProducts } from '../../../toolkitRedux/productsCollectionSlice';
 
 const Price = () => {
   const dispatch = useDispatch();

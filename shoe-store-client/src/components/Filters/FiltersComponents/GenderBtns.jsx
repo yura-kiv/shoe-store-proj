@@ -1,16 +1,16 @@
-import { React } from "react";
-import styles from "./styles/GenderBtns.module.scss";
-import { useDispatch } from "react-redux";
-import { changeGenders } from "../../../toolkitRedux/filtersSlice";
+import { React } from 'react';
+import styles from './styles/GenderBtns.module.scss';
+import { useDispatch } from 'react-redux';
+import { changeGenders } from '../../../toolkitRedux/filtersSlice';
 
 function GenderBtns() {
-  const genders = ["Men", "Woman"];
+  const genders = ['Men', 'Woman'];
   const dispatch = useDispatch();
 
   const setActivegenderBtn = (event) => {
     event.target.classList.toggle(styles.activeGenderBtn);
     dispatch(
-      changeGenders(event.target.innerText === "Men" ? "male" : "female")
+      changeGenders(event.target.innerText === 'Men' ? 'male' : 'female')
     );
   };
 

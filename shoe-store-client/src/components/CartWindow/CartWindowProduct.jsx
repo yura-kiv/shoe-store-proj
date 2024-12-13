@@ -1,9 +1,9 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import styles from "./styles/CartWindowProduct.module.scss";
-import { deleteProductFromCart } from "../../toolkitRedux/cartSlice";
-import { ReactComponent as DeleteBtn } from "../../assets/plus.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import styles from './styles/CartWindowProduct.module.scss';
+import { deleteProductFromCart } from '../../toolkitRedux/cartSlice';
+import { ReactComponent as DeleteBtn } from '../../assets/plus.svg';
+import { Link } from 'react-router-dom';
 
 const CartWindowProduct = ({ product }) => {
   const dispatch = useDispatch();
@@ -31,11 +31,11 @@ const CartWindowProduct = ({ product }) => {
         ></img>
       </Link>
       <div className={styles.textInfo}>
-        <span>{product.gender === "male" ? "Men" : "Woman"}</span>
+        <span>{product.gender === 'male' ? 'Men' : 'Woman'}</span>
         <span>Size: {product.activeSize}</span>
         <span>
           Color:
-          {" " +
+          {' ' +
             product.activeColor.charAt(0).toUpperCase() +
             product.activeColor.slice(1)}
         </span>

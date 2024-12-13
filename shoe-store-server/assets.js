@@ -1,15 +1,15 @@
 const assetColors = [
-  "white",
-  "black",
-  "green",
-  "gray",
-  "blue",
-  "yellow",
-  "orange",
-  "pink",
-  "brown",
-  "red",
-  "purple",
+  'white',
+  'black',
+  'green',
+  'gray',
+  'blue',
+  'yellow',
+  'orange',
+  'pink',
+  'brown',
+  'red',
+  'purple',
 ];
 
 const assetSizes = [
@@ -18,24 +18,24 @@ const assetSizes = [
 ];
 
 const assetTags = [
-  "low",
-  "lifestyle",
-  "run",
-  "sport",
-  "sport-style",
-  "training",
-  "high",
-  "skate",
-  "force",
-  "mid",
-  "retro",
+  'low',
+  'lifestyle',
+  'run',
+  'sport',
+  'sport-style',
+  'training',
+  'high',
+  'skate',
+  'force',
+  'mid',
+  'retro',
 ];
 
-const assetBrands = ["Nike", "Adidas", "New Balance"];
+const assetBrands = ['Nike', 'Adidas', 'New Balance'];
 
 const assetPrices = [0, 300];
 
-const assetGenders = ["male", "female"];
+const assetGenders = ['male', 'female'];
 
 module.exports = {
   assetColors,

@@ -1,4 +1,4 @@
-const Order = require("../../models/orderModel");
+const Order = require('../../models/orderModel');
 
 makeOrder = async (req, res) => {
   try {
@@ -12,10 +12,10 @@ makeOrder = async (req, res) => {
       description,
     });
     await order.save();
-    res.json({ msg: "Order added! :3" });
+    res.json({ msg: 'Order added! :3' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ msg: "Server Error." });
+    res.status(500).json({ msg: 'Server Error.' });
   }
 };
 

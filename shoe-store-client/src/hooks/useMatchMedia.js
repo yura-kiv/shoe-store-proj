@@ -1,9 +1,9 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from 'react';
 
 const queries = [
-  "(max-width: 600px)",
-  "(min-width: 600px)",
-  "(min-width: 770px)",
+  '(max-width: 600px)',
+  '(min-width: 600px)',
+  '(min-width: 770px)',
 ];
 
 export const useMatchMedia = () => {
@@ -13,14 +13,14 @@ export const useMatchMedia = () => {
 
   useLayoutEffect(() => {
     const handler = () => setValues(getValues);
-    mediaQueryLists.forEach((list) => list.addEventListener("change", handler));
+    mediaQueryLists.forEach((list) => list.addEventListener('change', handler));
     return () =>
       mediaQueryLists.forEach((list) =>
-        list.removeEventListener("change", handler)
+        list.removeEventListener('change', handler)
       );
   }, []);
 
-  return ["screen0_600", "screen600_plus", "screen770_plus"].reduce(
+  return ['screen0_600', 'screen600_plus', 'screen770_plus'].reduce(
     (acc, screen, index) => ({
       ...acc,
       [screen]: values[index],

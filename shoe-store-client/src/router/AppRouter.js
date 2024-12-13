@@ -1,10 +1,10 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import { privateRoutes, publicRoutes } from "./routes";
-import Layout from "./Layout";
-import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { selectIsAuthState } from "../toolkitRedux/userAuthSlice";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { privateRoutes, publicRoutes } from './routes';
+import Layout from './Layout';
+import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { selectIsAuthState } from '../toolkitRedux/userAuthSlice';
 
 const AppRouter = () => {
   const location = useLocation();
@@ -13,7 +13,7 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route
-        path="/"
+        path='/'
         element={<Layout />}
       >
         {!isAuth

@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./styles/Rating.module.scss";
-import { ReactComponent as StarRating } from "../../../assets/starRating.svg";
+import React from 'react';
+import styles from './styles/Rating.module.scss';
+import { ReactComponent as StarRating } from '../../../assets/starRating.svg';
 
 const Rating = ({ ratingValue }) => {
   return (

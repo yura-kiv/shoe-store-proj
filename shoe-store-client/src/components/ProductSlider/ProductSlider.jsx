@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styles from "./ProductSlider.module.scss";
-import { ReactComponent as Arrow } from "../../assets/arrow.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, FreeMode, Thumbs } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import React, { useState } from 'react';
+import styles from './ProductSlider.module.scss';
+import { ReactComponent as Arrow } from '../../assets/arrow.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, FreeMode, Thumbs } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const ProductSlider = ({ imgsList }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

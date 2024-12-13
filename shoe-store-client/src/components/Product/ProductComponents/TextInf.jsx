@@ -1,7 +1,7 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import styles from "./styles/TextInf.module.scss";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import styles from './styles/TextInf.module.scss';
 
 const TextInf = ({ id, name, brand, gender, price, activeColor }) => {
   const params = useParams();
@@ -16,7 +16,7 @@ const TextInf = ({ id, name, brand, gender, price, activeColor }) => {
 
       <span className={styles.textInfoBrand}>{brand}</span>
       <span className={styles.textInfoGender}>
-        {gender === "male" ? "Men" : "Woman"}
+        {gender === 'male' ? 'Men' : 'Woman'}
       </span>
       <span className={styles.textInfoPrice}>${price}</span>
     </div>

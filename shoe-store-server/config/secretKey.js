@@ -1,3 +1,3 @@
 module.exports = {
-  secretKey: "random_key",
+  secretKey: 'random_key',
 };

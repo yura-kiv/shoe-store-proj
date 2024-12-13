@@ -1,6 +1,6 @@
-import { React, useEffect, useRef, useState } from "react";
-import styles from "./styles/PreviewImg.module.scss";
-import { Link, useParams } from "react-router-dom";
+import { React, useEffect, useRef, useState } from 'react';
+import styles from './styles/PreviewImg.module.scss';
+import { Link, useParams } from 'react-router-dom';
 
 const PreviewImg = ({ imgsList, activePreviewImg, activeColor, id }) => {
   const carousellElementRef = useRef();

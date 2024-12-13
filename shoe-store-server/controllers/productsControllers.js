@@ -1,4 +1,4 @@
-const Product = require("../models/productModel");
+const Product = require('../models/productModel');
 const {
   assetColors,
   assetSizes,
@@ -6,7 +6,7 @@ const {
   assetBrands,
   assetPrices,
   assetGenders,
-} = require("../assets");
+} = require('../assets');
 
 class ProductsConroller {
   getAllProducts = async (req, res) => {
@@ -15,7 +15,7 @@ class ProductsConroller {
       res.json(products);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: "Server Error..." });
+      res.status(500).json({ message: 'Server Error...' });
     }
   };
 
@@ -25,7 +25,7 @@ class ProductsConroller {
       res.json({ count: count });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: "Server Error..." });
+      res.status(500).json({ message: 'Server Error...' });
     }
   };
 
@@ -34,19 +34,19 @@ class ProductsConroller {
       const id = req.params.id;
       const product = await Product.findById(id);
       if (!product) {
-        return res.status(404).json({ message: "Record not found :(" });
+        return res.status(404).json({ message: 'Record not found :(' });
       }
       res.json(product);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: "Server Error..." });
+      res.status(500).json({ message: 'Server Error...' });
     }
   };
 
   getProductsFilter = async (req, res) => {
     try {
       const query = req.query;
-      const name = query.name || "";
+      const name = query.name || '';
       const colors = query.colors ? query.colors : assetColors;
       const brands = query.brands ? query.brands : assetBrands;
       const genders = query.genders ? query.genders : assetGenders;
@@ -61,8 +61,8 @@ class ProductsConroller {
       /////
 
       const resultCount = await Product.countDocuments({
-        name: { $regex: name, $options: "i" },
-        "variants.color": { $in: colors },
+        name: { $regex: name, $options: 'i' },
+        'variants.color': { $in: colors },
         brand: { $in: brands },
         price: { $gte: prices[0], $lte: prices[1] },
         tags: { $in: tags },
@@ -75,8 +75,8 @@ class ProductsConroller {
       });
 
       const resultProducts = await Product.find({
-        name: { $regex: name, $options: "i" },
-        "variants.color": { $in: colors },
+        name: { $regex: name, $options: 'i' },
+        'variants.color': { $in: colors },
         brand: { $in: brands },
         price: { $gte: prices[0], $lte: prices[1] },
         tags: { $in: tags },
@@ -93,7 +93,7 @@ class ProductsConroller {
       res.status(200).json({ resultProducts, resultCount });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: "Server Error..." });
+      res.status(500).json({ message: 'Server Error...' });
     }
   };
 }

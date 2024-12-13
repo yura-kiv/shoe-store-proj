@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./Footer.module.scss";
-import { ReactComponent as Logo } from "../../assets/fullLogo.svg";
-import { ReactComponent as AnimateStr } from "../../assets/animateStr.svg";
-import { useMatchMedia } from "../../hooks/useMatchMedia";
+import React from 'react';
+import styles from './Footer.module.scss';
+import { ReactComponent as Logo } from '../../assets/fullLogo.svg';
+import { ReactComponent as AnimateStr } from '../../assets/animateStr.svg';
+import { useMatchMedia } from '../../hooks/useMatchMedia';
 
 const Footer = () => {
   const { screen600_plus } = useMatchMedia();
@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       {screen600_plus && (
         <div className={styles.marquee}>
-          <div className={styles.marqueeContent + " " + styles.scroll}>
+          <div className={styles.marqueeContent + ' ' + styles.scroll}>
             <div className={styles.svgTextWrapper}>
               <AnimateStr />
             </div>
@@ -33,7 +33,7 @@ const Footer = () => {
               <AnimateStr />
             </div>
           </div>
-          <div className={styles.marqueeContent + " " + styles.scroll}>
+          <div className={styles.marqueeContent + ' ' + styles.scroll}>
             <div className={styles.svgTextWrapper}>
               <AnimateStr />
             </div>

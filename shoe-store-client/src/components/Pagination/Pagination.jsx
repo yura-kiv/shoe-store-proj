@@ -1,10 +1,10 @@
-import React from "react";
-import ReactPaginate from "react-paginate";
-import styles from "./Pagination.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { changePage } from "../../toolkitRedux/filtersSlice";
-import { ReactComponent as Arrow } from "../../assets/oneArrow.svg";
-import { fetchProducts } from "../../toolkitRedux/productsCollectionSlice";
+import React from 'react';
+import ReactPaginate from 'react-paginate';
+import styles from './Pagination.module.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import { changePage } from '../../toolkitRedux/filtersSlice';
+import { ReactComponent as Arrow } from '../../assets/oneArrow.svg';
+import { fetchProducts } from '../../toolkitRedux/productsCollectionSlice';
 
 const Pagination = () => {
   const dispatch = useDispatch();

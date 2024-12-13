@@ -1,12 +1,12 @@
-import { React, useEffect, useState } from "react";
-import styles from "./Product.module.scss";
-import PreviewImg from "./ProductComponents/PreviewImg";
-import LikeBtn from "./ProductComponents/LikeBtn";
-import TextInf from "./ProductComponents/TextInf";
-import ColorBtns from "./ProductComponents/ColorBtns";
-import CartBtn from "./ProductComponents/CartBtn";
-import SizeBtns from "./ProductComponents/SizeBtns";
-import Rating from "./ProductComponents/Rating";
+import { React, useEffect, useState } from 'react';
+import styles from './Product.module.scss';
+import PreviewImg from './ProductComponents/PreviewImg';
+import LikeBtn from './ProductComponents/LikeBtn';
+import TextInf from './ProductComponents/TextInf';
+import ColorBtns from './ProductComponents/ColorBtns';
+import CartBtn from './ProductComponents/CartBtn';
+import SizeBtns from './ProductComponents/SizeBtns';
+import Rating from './ProductComponents/Rating';
 
 const getColors = (variants) => {
   const colors = [];

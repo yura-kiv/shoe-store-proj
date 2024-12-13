@@ -1,7 +1,7 @@
-const User = require("../models/userModel");
-const login = require("./userControllers/login");
-const signup = require("./userControllers/signup");
-const makeOrder = require("./userControllers/makeOrder");
+const User = require('../models/userModel');
+const login = require('./userControllers/login');
+const signup = require('./userControllers/signup');
+const makeOrder = require('./userControllers/makeOrder');
 
 class usersController {
   signup = (req, res) => signup(req, res);
@@ -14,7 +14,7 @@ class usersController {
       res.json(users);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ msg: "Server Error." });
+      res.status(500).json({ msg: 'Server Error.' });
     }
   };
 }
